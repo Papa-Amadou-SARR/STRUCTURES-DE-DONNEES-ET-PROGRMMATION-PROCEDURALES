@@ -1,0 +1,23 @@
+ALGORITHM TABLEAUX
+VAR
+    tab1 : ARRAY_OF INTEGER[4];
+    tab2 : ARRAY_OF INTEGER[5];
+    i:INTEGER;
+    j:INTEGER;
+    sum1:INTEGER:=0;
+    sum2:INTEGER:=0;
+BEGIN
+
+tab1:=[3,1,7,9];
+tab2:=[2,4,1,9,3];
+    FOR i FROM 0 TO tab1.lenght-1 DO
+        FOR j FROM 0 TO tab2.lenght-1 DO
+            IF (tab1[i]<>tab2[j]) THEN
+                sum1:=sum1+tab1[i];
+            END_IF
+            IF (tab2[j]<>tab1[i]) THEN
+                sum2:=sum2+tab2[j];
+            END_IF
+        END_FOR
+    END_FOR
+END

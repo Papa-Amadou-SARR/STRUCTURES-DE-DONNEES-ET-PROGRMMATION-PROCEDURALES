@@ -1,0 +1,25 @@
+PROCEDURE dot_product(VAR v1 : ARRAY_OF INTEGER[3], VAR v2 : ARRAY_OF INTEGER[3])
+VAR
+    ps:INTEGER:=0;
+    i:INTEGER;
+    j:INTEGER;
+BEGIN
+    FOR i FROM 0 TO v1.lenght-1 DO
+        FOR j FROM 0 TO v2.lenght-1 DO
+            ps:=ps+(v1[i]*v2[j])
+        END_FOR
+    END_FOR
+END
+
+
+ALGORITHM Produit scalaire
+VAR
+    ps:INTEGER:=0;
+BEGIN
+    dot_product(v1, v2);
+        IF (ps=0) THEN
+            Write(Les vecteurs sont orthogonaux)
+        ELSE
+            Write(Les vecteurs ne sont pas orthogonaux)
+        END_IF
+END
